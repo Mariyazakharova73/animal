@@ -112,7 +112,7 @@ body {
   &__social {
     margin-top: 216px;
     display: flex;
-    gap: 50px;
+
   }
 }
 
@@ -121,9 +121,14 @@ body {
   align-items: center;
   list-style-type: none;
   padding-left: 0;
+  gap: 50px;
 
   &__svg {
     fill: $light-brown;
+
+    &_white {
+      fill: $white;
+    }
   }
 }
 
@@ -199,6 +204,8 @@ body {
 .app {
   background-color: $orange;
   color: $white;
+  padding-top: 175px;
+  padding-bottom: 115px;
 
   &__box {
     display: flex;
@@ -213,6 +220,8 @@ body {
     font-weight: 700;
     font-size: 80px;
     line-height: 1.4;
+    margin-bottom: 39px;
+    margin-top: 126px;
   }
 
   &__image {
@@ -247,6 +256,10 @@ body {
     display: block;
     background-position: center;
     background-size: cover;
+    &_xs{
+      width: 140px;
+      height: 41px;
+    }
   }
 
   &__appstore {
@@ -260,13 +273,14 @@ body {
 
 .footer {
   background-color: $brown;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1350px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 85px auto 113px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__logo {
     background-image: url(../images/footer-logo.svg);
@@ -275,6 +289,5 @@ body {
     width: 340px;
     height: 90px;
     display: block;
-
   }
 }
