@@ -122,8 +122,6 @@ body {
   list-style-type: none;
   padding-left: 0;
 
-  &__item {}
-
   &__svg {
     fill: $light-brown;
   }
@@ -165,5 +163,118 @@ body {
     position: absolute;
     bottom: 24px;
     right: 24px;
+  }
+}
+
+.counter {
+  text-align: center;
+  background-color: #FBF8F8;
+  padding-top: 200px;
+  padding-bottom: 273px;
+  position: relative;
+
+  &__title {
+    color: $brown;
+    font-weight: 700;
+    font-size: 144px;
+    margin-bottom: 2px;
+  }
+
+  &__text {
+    color: $dark;
+    font-weight: 400;
+    font-size: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+
+  &__img {
+    position: absolute;
+    right: 2%;
+    top: 145px;
+  }
+}
+
+.app {
+  background-color: $orange;
+  color: $white;
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    flex-basis: 600px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1.4;
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__rabbit {
+    position: absolute;
+    z-index: 1;
+    max-width: 363px;
+    bottom: 80px;
+    left: -260px;
+
+  }
+
+  &__screen {
+    position: relative;
+    z-index: 2;
+    max-width: 367px;
+  }
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  &__link {
+    background-repeat: no-repeat;
+    width: 167px;
+    height: 49px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__appstore {
+    background-image: url(../images/app-store.svg);
+  }
+
+  &__googleplay {
+    background-image: url(../images/google-play-badge.png);
+  }
+}
+
+.footer {
+  background-color: $brown;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 85px auto 113px;
+
+  &__logo {
+    background-image: url(../images/footer-logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 340px;
+    height: 90px;
+    display: block;
+
   }
 }
