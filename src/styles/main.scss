@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+$brown: #59443F;
+$light-brown: #C3B9B5;
+$dark: #080606;
+$white: #FFFFFF;
+$orange: #FFC59E;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1350px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  margin-top: 85px;
+  margin-bottom: 113px;
+
+  &__logo {
+    background-image: url(../images/logo-header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 79px;
+    height: 62px;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  &__item {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 700;
+    color: $light-brown;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__bth {
+    font-size: 20px;
+    font-weight: 700;
+    color: $orange;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    &::before {
+      content: '';
+      background-image: url(../images/geo.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 20px;
+      height: 29px;
+      display: block;
+    }
+  }
+}
+
+.container {
+  max-width: 1350px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: $dark;
+    margin-top: 0;
+  }
+
+  &__link {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    color: $white;
+    background-color: $orange;
+    box-shadow: 0px 4px 20px $orange;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 24px 70px;
+    border-radius: 33.5px;
+  }
+
+  &__social {
+    margin-top: 200px;
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  &__item {
+    
+  }
+
+  &__svg {
+    fill: $light-brown;
+  }
+}
