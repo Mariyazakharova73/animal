@@ -17,9 +17,7 @@ body {
   max-width: 1350px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
-  margin-top: 85px;
-  margin-bottom: 113px;
+  margin: 85px auto 113px;
 
   &__logo {
     background-image: url(../images/logo-header.svg);
@@ -63,6 +61,7 @@ body {
     display: flex;
     align-items: center;
     gap: 19px;
+    cursor: pointer;
 
     &::before {
       content: '';
@@ -80,7 +79,6 @@ body {
   max-width: 1350px;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid red;
   margin: 0 auto;
 }
 
@@ -95,6 +93,7 @@ body {
     line-height: 1.4;
     color: $dark;
     margin-top: 0;
+    margin-bottom: 71px;
   }
 
   &__link {
@@ -106,12 +105,12 @@ body {
     box-shadow: 0px 4px 20px $orange;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 24px 70px;
+    padding: 19px 76px;
     border-radius: 33.5px;
   }
 
   &__social {
-    margin-top: 200px;
+    margin-top: 216px;
     display: flex;
     gap: 50px;
   }
@@ -122,11 +121,49 @@ body {
   align-items: center;
   list-style-type: none;
   padding-left: 0;
-  &__item {
-    
-  }
+
+  &__item {}
 
   &__svg {
     fill: $light-brown;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
+  gap: 24px;
+  padding-top: 150px;
+  margin-bottom: 157px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+  }
+
+  &__title {
+    color: $brown;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__text {
+    color: $brown;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__svg {
+    fill: $orange;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
   }
 }
