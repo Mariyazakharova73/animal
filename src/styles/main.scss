@@ -10,14 +10,34 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.page {
+  max-width: 1350px;
+  min-width: 320px;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid red;
+
+  &__content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  // @media screen and (max-width: 1279px) {
+  //   .page {
+  //     max-width: 1000px;
+  // }
+  // }
+}
+
+.section {
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1350px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 85px auto 113px;
+  padding: 85px 0 113px;
+  box-sizing: border-box;
 
   &__logo {
     background-image: url(../images/logo-header.svg);
@@ -75,13 +95,6 @@ body {
   }
 }
 
-.container {
-  max-width: 1350px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-
 .main {
   display: flex;
   align-items: center;
@@ -134,10 +147,10 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(319px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
   padding-top: 150px;
-  margin-bottom: 157px;
+  padding-bottom: 157px;
 
   &__item {
     display: flex;
@@ -256,7 +269,8 @@ body {
     display: block;
     background-position: center;
     background-size: cover;
-    &_xs{
+
+    &_xs {
       width: 140px;
       height: 41px;
     }
