@@ -21,11 +21,6 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
-  // @media screen and (max-width: 1279px) {
-  //   .page {
-  //     max-width: 1000px;
-  // }
-  // }
 }
 
 .section {
@@ -36,26 +31,58 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 85px 0 113px;
+  padding-top: 85px;
+  padding-bottom: 113px;
   box-sizing: border-box;
+  border: 1px solid red;
+  gap: 70px;
+
+  @media screen and (max-width: 1279px) {
+    & {
+      gap: 30px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
 
   &__logo {
     background-image: url(../images/logo-header.svg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     width: 79px;
     height: 62px;
+    flex-shrink: 0;
   }
 
   &__list {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     list-style-type: none;
     padding-left: 0;
+    flex-wrap: wrap;
+    gap: 70px;
   }
 
-  &__item {
-    margin-left: 35px;
-    margin-right: 35px;
+  @media screen and (max-width: 1279px) {
+    &__list {
+      gap: 30px;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__list {
+      flex-direction: column;
+      gap: 15px;
+      display: none;
+    }
   }
 
   &__link {
@@ -93,12 +120,62 @@ body {
       display: block;
     }
   }
+
+  &__menu {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__menu {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border: none;
+      background-color: aqua;
+    }
+  }
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border: 1px solid red;
+  min-height: 827px;
+  padding-top: 53px;
+  background-image: url(../images/dog.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: 767px) {
+    & {
+      display: flex;
+      flex-direction: column;
+      min-height: 400px;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    & {
+      align-items: center;
+      background-position: center;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    &::before {
+      content: '';
+      background-color: #FFFFFF;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
 
   &__title {
     font-size: 80px;
@@ -107,6 +184,21 @@ body {
     color: $dark;
     margin-top: 0;
     margin-bottom: 71px;
+    max-width: 645px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &__title {
+      font-size: 60px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__title {
+      font-size: 40px;
+      text-align: center;
+      max-width: 300px;
+    }
   }
 
   &__link {
@@ -120,12 +212,30 @@ body {
     text-decoration: none;
     padding: 19px 76px;
     border-radius: 33.5px;
+    align-self: flex-start;
+  }
+
+  @media screen and (max-width: 560px) {
+    &__link {
+      align-self: center;
+    }
   }
 
   &__social {
     margin-top: 216px;
     display: flex;
+  }
 
+  @media screen and (max-width: 767px) {
+    &__social {
+      margin-top: 100px;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    &__social {
+      margin-top: 50px;
+    }
   }
 }
 
@@ -151,6 +261,14 @@ body {
   gap: 24px;
   padding-top: 150px;
   padding-bottom: 157px;
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+  }
 
   &__item {
     display: flex;
@@ -190,12 +308,39 @@ body {
   padding-top: 200px;
   padding-bottom: 273px;
   position: relative;
+  z-index: -2;
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    & {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
 
   &__title {
     color: $brown;
     font-weight: 700;
     font-size: 144px;
     margin-bottom: 2px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    &__title {
+      font-size: 70px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__title {
+      font-size: 50px;
+    }
   }
 
   &__text {
@@ -207,10 +352,41 @@ body {
     line-height: 1.4;
   }
 
+  @media screen and (max-width: 1024px) {
+    &__text {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__text {
+      font-size: 30px;
+    }
+  }
+
   &__img {
     position: absolute;
     right: 2%;
     top: 145px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    &__img {
+      z-index: -1;
+      width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__img {
+      top: 30px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__img {
+      display: none;
+    }
   }
 }
 
@@ -219,6 +395,28 @@ body {
   color: $white;
   padding-top: 175px;
   padding-bottom: 115px;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    & {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    &::before {
+      content: '';
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
+  }
 
   &__box {
     display: flex;
@@ -227,6 +425,7 @@ body {
 
   &__text {
     flex-basis: 600px;
+    z-index: 5;
   }
 
   &__title {
@@ -235,6 +434,19 @@ body {
     line-height: 1.4;
     margin-bottom: 39px;
     margin-top: 126px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    &__title {
+      font-size: 50px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__title {
+      margin-top: 30px;
+      font-size: 40px;
+    }
   }
 
   &__image {
@@ -247,7 +459,22 @@ body {
     max-width: 363px;
     bottom: 80px;
     left: -260px;
+  }
 
+  @media screen and (max-width: 767px) {
+    &__rabbit {
+      max-width: 200px;
+      left: -150px;
+      bottom: 40px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__rabbit {
+      max-width: 150px;
+      left: -120px;
+      bottom: 40px;
+    }
   }
 
   &__screen {
@@ -255,12 +482,25 @@ body {
     z-index: 2;
     max-width: 367px;
   }
+
+  @media screen and (max-width: 767px) {
+    &__screen {
+      max-width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    &__screen {
+      max-width: 150px;
+    }
+  }
 }
 
 .download {
   display: flex;
   align-items: center;
   gap: 28px;
+
 
   &__link {
     background-repeat: no-repeat;
@@ -273,6 +513,13 @@ body {
     &_xs {
       width: 140px;
       height: 41px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__link {
+      width: 85px;
+      height: 25px;
     }
   }
 
@@ -289,6 +536,7 @@ body {
   background-color: $brown;
   padding-top: 80px;
   padding-bottom: 80px;
+  border: 1px solid red;
 
   &__box {
     display: flex;
