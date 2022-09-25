@@ -19,4 +19,4 @@
 
 **Cсылка на страницу проекта**
 
-* [Ссылка: "animal"](https://mariyazakharova73.github.io/animal/index.html)
+* [Ссылка: "animal"](https://mariyazakharova73.github.io/animal)
